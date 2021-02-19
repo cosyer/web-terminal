@@ -1,6 +1,6 @@
 import { Terminal } from "xterm";
 import "xterm/css/xterm.css";
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { AttachAddon } from "xterm-addon-attach";
 import axios from "axios";
 

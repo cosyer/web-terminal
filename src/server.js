@@ -19,6 +19,7 @@ function nodeEnvBind() {
   termMap.set(term.pid, term);
   return term;
 }
+
 //解决跨域问题
 app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -26,6 +27,7 @@ app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Methods", "*");
   next();
 });
+
 //服务端初始化
 app.post("/terminal", (req, res) => {
   const term = nodeEnvBind(req);
